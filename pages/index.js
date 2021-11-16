@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
   return (
     <div className={styles.container}>
-      <h1>Holisss</h1>
+      <h1>Holisss {`:)`}</h1>
     </div>
   );
 }

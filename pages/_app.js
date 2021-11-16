@@ -7,19 +7,19 @@ function MyApp({ Component, pageProps }) {
       <nav>
         <Link href="/">
           <a> | | Home | </a>
-        </Link>{" "}
+        </Link>
         <Link href="/pokemon">
           <a> | Pokemon | </a>
-        </Link>{" "}
+        </Link>
         <Link href="/mis-pokemon/ISR">
           <a> | Pokemon ISR | </a>
-        </Link>{" "}
+        </Link>
         <Link href="/mis-pokemon/SSG">
           <a>| Pokemon SSG | </a>
-        </Link>{" "}
+        </Link>
         <Link href="/mis-pokemon/SSR">
           <a> | Pokemon SSR | | </a>
-        </Link>{" "}
+        </Link>
       </nav>
       <Component {...pageProps} />
     </>
