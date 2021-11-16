@@ -13,7 +13,6 @@ const Pokemon = () => {
     })();
   }, []);
 
-  console.log(pokemons);
   return (
     <>
       <h2>Pokemon</h2>
