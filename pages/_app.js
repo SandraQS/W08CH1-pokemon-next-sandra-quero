@@ -1,24 +1,26 @@
 import "../styles/globals.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import Link from "next/link";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <nav>
+      <nav className="nav">
         <Link href="/home">
-          <a> | | Home | </a>
+          <a className="nav-link"> Home </a>
         </Link>
         <Link href="/pokemon">
-          <a> | Pokemon | </a>
+          <a className="nav-link"> Pokemon </a>
         </Link>
         <Link href="/mis-pokemon/ISR">
-          <a> | Pokemon ISR | </a>
+          <a className="nav-link"> Pokemon ISR </a>
         </Link>
         <Link href="/mis-pokemon/SSG">
-          <a>| Pokemon SSG | </a>
+          <a className="nav-link"> Pokemon SSG </a>
         </Link>
         <Link href="/mis-pokemon/SSR">
-          <a> | Pokemon SSR | | </a>
+          <a className="nav-link"> Pokemon SSR </a>
         </Link>
       </nav>
       <Component {...pageProps} />

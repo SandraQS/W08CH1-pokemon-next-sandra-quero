@@ -16,9 +16,11 @@ const Pokemon = () => {
   return pokemons.lengh ? (
     <>
       <h2>Pokemon</h2>
-      <ul>
+      <ul className="list-group">
         {pokemons.map((pokemon) => (
-          <li key={pokemon.name}> {pokemon.name}</li>
+          <li className="list-group-item" key={pokemon.name}>
+            {pokemon.name}
+          </li>
         ))}
       </ul>
     </>

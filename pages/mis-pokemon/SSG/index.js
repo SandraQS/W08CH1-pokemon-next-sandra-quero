@@ -3,9 +3,9 @@ const PokemonSSG = ({ pokemons }) => {
   return pokemons.length ? (
     <>
       <h2>PokemonSSG</h2>
-      <ul>
+      <ul className="list-group">
         {pokemons.map((pokemon) => (
-          <li key={pokemon.id}>
+          <li className="list-group-item" key={pokemon.id}>
             <Link href={`/mis-pokemon/ISR/${pokemon.id}`}>
               <a>{pokemon.name}</a>
             </Link>
