@@ -1,16 +1,21 @@
 import Link from "next/link";
 
 const PokemonISR = ({ pokemons }) => {
-  return (
+  return pokemons.length ? (
     <>
       <h2>PokemonISR</h2>
-      {pokemons.map((pokemon) => (
-        // eslint-disable-next-line @next/next/link-passhref
-        <Link href={`/mis-pokemon/ISR/${pokemon.id}`} key={pokemon.id}>
-          <p>* {pokemon.name}</p>
-        </Link>
-      ))}
+      <ul>
+        {pokemons.map((pokemon) => (
+          <li key={pokemon.id}>
+            <Link href={`/mis-pokemon/ISR/${pokemon.id}`}>
+              <a>{pokemon.name}</a>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </>
+  ) : (
+    <h2>Loading...</h2>
   );
 };
 export const getStaticProps = async () => {
