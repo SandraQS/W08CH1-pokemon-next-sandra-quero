@@ -1,5 +1,4 @@
 const PokemonSSR = ({ pokemons }) => {
-  console.log(pokemons[0].name);
   return (
     <>
       <h2>PokemonSSR</h2>
