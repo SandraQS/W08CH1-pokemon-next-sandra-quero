@@ -1,17 +1,24 @@
+import Link from "next/link";
 const PokemonSSG = ({ pokemons }) => {
-  return (
+  return pokemons.length ? (
     <>
       <h2>PokemonSSG</h2>
       <ul>
         {pokemons.map((pokemon) => (
-          <li key={pokemon.id}>{pokemon.name}</li>
+          <li key={pokemon.id}>
+            <Link href={`/mis-pokemon/ISR/${pokemon.id}`}>
+              <a>{pokemon.name}</a>
+            </Link>
+          </li>
         ))}
       </ul>
     </>
+  ) : (
+    <h2>Loading...</h2>
   );
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const response = await fetch(
     `https://appi-pokemon-sqs.herokuapp.com/pokemon`
   );

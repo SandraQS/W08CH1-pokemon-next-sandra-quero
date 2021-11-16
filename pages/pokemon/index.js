@@ -13,7 +13,7 @@ const Pokemon = () => {
     })();
   }, []);
 
-  return (
+  return pokemons.lengh ? (
     <>
       <h2>Pokemon</h2>
       <ul>
@@ -22,6 +22,8 @@ const Pokemon = () => {
         ))}
       </ul>
     </>
+  ) : (
+    <h2>Loading...</h2>
   );
 };
 

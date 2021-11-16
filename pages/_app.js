@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <nav>
-        <Link href="/">
+        <Link href="/home">
           <a> | | Home | </a>
         </Link>
         <Link href="/pokemon">
